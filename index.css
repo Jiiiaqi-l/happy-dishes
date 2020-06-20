@@ -141,7 +141,7 @@ header {
   margin-right: .5rem;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
   header {
     padding: .5rem;
   }
@@ -181,6 +181,11 @@ header {
 
   .menu-list {
     font-size: .9rem;
+  }
+  
+  .menu-list>div {
+    flex: 0 0 45%;
+    margin-right: 5%;
   }
   
 }
