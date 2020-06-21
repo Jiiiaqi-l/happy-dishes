@@ -11,6 +11,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="mealChoice.js"></script>
+    
     <link rel="stylesheet" href="./index.css">
     <script type="text/x-template" id="item-template">
       <div>
@@ -43,6 +45,7 @@
           <li
             v-for="ctgr of categories"
             :key="ctgr.id"
+            :class="selectCategoryId === ctgr.id ? 'orange-font' : ''"
             @click="sideBarSelect(ctgr.id)">
             <i :class="ctgr.icon">{{ctgr.icon}}</i>
             {{ctgr.type}}
@@ -103,6 +106,7 @@
         el: '#menu',
         data: {
           search: '',
+          selectCategoryId: null,
           categories: [
             {type: '厨师推荐', icon: '👨‍🍳', id: 0},
             {type: '前菜', icon: '🥗', id: 1},
@@ -117,30 +121,7 @@
           ],
           current_item: {},
           filterDishes: [],
-          dishes: [
-            {id:1, name: '干煸四季豆', type:[7], src:'1.jpg', recommend: true, recipe: ['豆角', '猪肉', '蒜'], methods:['你猜猜','我猜猜', '他猜猜'], link: [{name: '练练姐姐', content: 'https://www.xiachufang.com/recipe/104730172/'}]},
-            {id:2, name: '咖喱鸡饭', type:[6], src:'2.jpg', recommend: true, recipe: ['鸡腿肉/鸡胸肉', '咖喱', '洋葱'], methods:['你猜猜','我猜猜', '他猜猜'], link: [{name: '练练姐姐', content: 'https://www.xiachufang.com/recipe/104730172/'}]},
-            {id:3, name: '可乐排骨', type:[2], src:'3.jpg', recommend: true, recipe: ['排骨', '可乐'], methods:['你猜猜','我猜猜', '他猜猜'], link: [{name: '练练姐姐', content: 'https://www.xiachufang.com/recipe/104730172/'}]},
-            {id:4, name: '芋头火锅鸡', type:[6], src:'4.jpg', recommend: true, recipe: ['豆角', '肉沫', '臭蒜'], methods:['你猜猜','我猜猜', '他猜猜'], link: [{name: '练练姐姐', content: 'https://www.xiachufang.com/recipe/104730172/'}]},
-            {id:5, name: '尖椒牛肉', type:[7], src:'5.jpg', recommend: true, recipe: ['豆角', '肉沫', '臭蒜'], methods:['你猜猜','我猜猜', '他猜猜'], link: [{name: '练练姐姐', content: 'https://www.xiachufang.com/recipe/104730172/'}]},
-            {id:6, name: '可乐鸡翅', type:[6], src:'6.jpg', recommend: true, recipe: ['豆角', '肉沫', '臭蒜'], methods:['你猜猜','我猜猜', '他猜猜'], link: [{name: '练练姐姐', content: 'https://www.xiachufang.com/recipe/104730172/'}]},
-            {id:7, name: '尖椒肉片', type:[7], src:'7.jpg', recommend: true, recipe: ['豆角', '肉沫', '臭蒜'], methods:['你猜猜','我猜猜', '他猜猜'], link: [{name: '练练姐姐', content: 'https://www.xiachufang.com/recipe/104730172/'}]},
-            {id:8, name: '狼牙土豆', type:[7], src:'8.jpg', recommend: true, recipe: ['豆角', '肉沫', '臭蒜'], methods:['你猜猜','我猜猜', '他猜猜'], link: [{name: '练练姐姐', content: 'https://www.xiachufang.com/recipe/104730172/'}]},
-            {id:9, name: '麻婆豆腐', type:[7], src:'9.jpg', recommend: true, recipe: ['豆角', '肉沫', '臭蒜'], methods:['你猜猜','我猜猜', '他猜猜'], link: [{name: '练练姐姐', content: 'https://www.xiachufang.com/recipe/104730172/'}]},
-            {id:10, name: '腊肉西蓝花', type:[7], src:'10.jpg', recommend: true, recipe: ['豆角', '肉沫', '臭蒜'], methods:['你猜猜','我猜猜', '他猜猜'], link: [{name: '练练姐姐', content: 'https://www.xiachufang.com/recipe/104730172/'}]},
-            {id:11, name: '红烧猪蹄', type:[7], src:'11.jpg', recommend: true, recipe: ['豆角', '肉沫', '臭蒜'], methods:['你猜猜','我猜猜', '他猜猜'], link: [{name: '练练姐姐', content: 'https://www.xiachufang.com/recipe/104730172/'}]},
-            {id:12, name: '鱼香肉丝', type:[7], src:'12.jpg', recommend: true, recipe: ['豆角', '肉沫', '臭蒜'], methods:['你猜猜','我猜猜', '他猜猜'], link: [{name: '练练姐姐', content: 'https://www.xiachufang.com/recipe/104730172/'}]},
-            {id:13, name: '葱爆蛤蜊', type:[7], src:'13.jpg', recommend: true, recipe: ['豆角', '肉沫', '臭蒜'], methods:['你猜猜','我猜猜', '他猜猜'], link: [{name: '练练姐姐', content: 'https://www.xiachufang.com/recipe/104730172/'}]},
-            {id:14, name: '地三鲜', type:[7], src:'14.jpg', recommend: true, recipe: ['豆角', '肉沫', '臭蒜'], methods:['你猜猜','我猜猜', '他猜猜'], link: [{name: '练练姐姐', content: 'https://www.xiachufang.com/recipe/104730172/'}]},
-            {id:15, name: '蒜蓉油麦菜', type:[7], src:'15.jpg', recommend: true, recipe: ['豆角', '肉沫', '臭蒜'], methods:['你猜猜','我猜猜', '他猜猜'], link: [{name: '练练姐姐', content: 'https://www.xiachufang.com/recipe/104730172/'}]},
-            {id:16, name: '豆豉蒸鱼', type:[7], src:'16.jpg', recommend: true, recipe: ['豆角', '肉沫', '臭蒜'], methods:['你猜猜','我猜猜', '他猜猜'], link: [{name: '练练姐姐', content: 'https://www.xiachufang.com/recipe/104730172/'}]},
-            {id:17, name: '木须肉', type:[7], src:'17.jpg', recommend: true, recipe: ['豆角', '肉沫', '臭蒜'], methods:['你猜猜','我猜猜', '他猜猜'], link: [{name: '练练姐姐', content: 'https://www.xiachufang.com/recipe/104730172/'}]},
-            {id:18, name: '干锅鸡', type:[7], src:'18.jpg', recommend: true, recipe: ['豆角', '肉沫', '臭蒜'], methods:['你猜猜','我猜猜', '他猜猜'], link: [{name: '练练姐姐', content: 'https://www.xiachufang.com/recipe/104730172/'}]},
-            {id:19, name: '酱牛肉', type:[7], src:'19.jpg', recommend: true, recipe: ['豆角', '肉沫', '臭蒜'], methods:['你猜猜','我猜猜', '他猜猜'], link: [{name: '练练姐姐', content: 'https://www.xiachufang.com/recipe/104730172/'}]},
-            {id:20, name: '烤羊腿', type:[7], src:'20.jpg', recommend: true, recipe: ['豆角', '肉沫', '臭蒜'], methods:['你猜猜','我猜猜', '他猜猜'], link: [{name: '练练姐姐', content: 'https://www.xiachufang.com/recipe/104730172/'}]},
-            {id:21, name: '豆腐炖鱼', type:[7], src:'21.jpg', recommend: true, recipe: ['豆角', '肉沫', '臭蒜'], methods:['你猜猜','我猜猜', '他猜猜'], link: [{name: '练练姐姐', content: 'https://www.xiachufang.com/recipe/104730172/'}]},
-            {id:22, name: '葱烧豆腐', type:[7], src:'22.jpg', recommend: true, recipe: ['豆角', '肉沫', '臭蒜'], methods:['你猜猜','我猜猜', '他猜猜'], link: [{name: '练练姐姐', content: 'https://www.xiachufang.com/recipe/104730172/'}]}
-          ]
+          dishes: mealData.meals
         },
         created: function() {
           this.filterDishes = this.dishes;
@@ -151,18 +132,28 @@
             $('#exampleModal').modal('show');
           },
           sideBarSelect: function(catgoryId) {
+
+            if (catgoryId === this.selectCategoryId) {
+              if (!this.search) this.filterDishes = this.dishes;
+              else this.handleSearch();
+              this.selectCategoryId = null;
+              return;
+            }
+
             const tmp_dishes = [];
+
             if (catgoryId === 0) {
-              for (let dish of this.dishes) {
+              for (let dish of this.filterDishes) {
                 if (dish.recommend) tmp_dishes.push(dish);
               }
             } else {
-              for (let dish of this.dishes) {
+              for (let dish of this.filterDishes) {
                 if (dish.type.indexOf(catgoryId) !== -1) tmp_dishes.push(dish);
               }
             }
 
             this.filterDishes = tmp_dishes;
+            this.selectCategoryId = catgoryId;
           },
 
           handleSearch: function() {
@@ -177,11 +168,13 @@
             }
 
             this.filterDishes = tmp_dishes;
+            this.selectCategoryId = null;
           },
 
           handleClear: function() {
             this.filterDishes = this.dishes;
             this.search = '';
+            this.selectCategoryId = null;
           }
         }
       });
