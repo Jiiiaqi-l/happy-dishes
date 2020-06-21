@@ -114,12 +114,6 @@ header {
   overflow: hidden;
 }
 
-.menu-list figure:hover img {
-  opacity: 0.8;
-  transition: .4s ease;
-  cursor: pointer;
-}
-
 .menu-list figcaption {
   height: 3rem;
   text-align: center;
@@ -212,6 +206,12 @@ header {
   #side-bar li:hover {
     cursor: pointer;
     color: #fe4066;
+  }
+
+  .menu-list figure:hover img {
+    opacity: 0.8;
+    transition: .4s ease;
+    cursor: pointer;
   }
   
 }
