@@ -28,11 +28,11 @@
     <div id="menu">
       <header>
         <span id="logo">
-          <span>ca</span>
-          <span>li</span>
-          <span>su</span>
+          <span>胖</span>
+          <span>三</span>
+          <span>斤</span>
           <span>De</span>
-          <span>Kitchen</span>
+          <span>厨房</span>
         </span>
         <span id="search">
           <input type="text" placeholder="菜名/食材" v-model="search">
@@ -52,7 +52,6 @@
           </li>
         </ul>
         <div class="main">
-          <h3>菜谱</h3>
           <div class="menu-list">
             <dish-list
               v-for="dish of filterDishes"
@@ -132,6 +131,7 @@
             $('#exampleModal').modal('show');
           },
           sideBarSelect: function(catgoryId) {
+            // console.log(catgoryId);
 
             if (catgoryId === this.selectCategoryId) {
               if (!this.search) this.filterDishes = this.dishes;
