@@ -7,7 +7,7 @@ const mealData = {
         "type": [
           2
         ],
-        "src": "26.jpg",
+        "src": "./photo/photo15.jpg",
         "recommend": true,
         "recipe": [
           "土豆",
@@ -33,7 +33,7 @@ const mealData = {
         "type": [
           2
         ],
-        "src": "7.jpg",
+        "src": "./photo/photo9.jpg",
         "recommend": false,
         "recipe": [
           "猪肉",
@@ -58,7 +58,7 @@ const mealData = {
         "type": [
           6
         ],
-        "src": "18.jpg",
+        "src": "./photo/photo21.jpg",
         "recommend": false,
         "recipe": [
           "鸡",
@@ -84,7 +84,7 @@ const mealData = {
         "type": [
           7
         ],
-        "src": "9.jpg",
+        "src": "./photo/photo7.jpg",
         "recommend": false,
         "recipe": [
           "豆腐",
@@ -106,7 +106,7 @@ const mealData = {
         "type": [
           5
         ],
-        "src": "16.jpg",
+        "src": "./photo/photo13.jpg",
         "recommend": true,
         "recipe": [
           "鱼"
@@ -131,7 +131,7 @@ const mealData = {
         "type": [
           2
         ],
-        "src": "12.jpg",
+        "src": "./photo/photo11.jpg",
         "recommend": false,
         "recipe": [
           "猪肉",
@@ -156,7 +156,7 @@ const mealData = {
         "type": [
           5
         ],
-        "src": "13.jpg",
+        "src": "./photo//photo14.jpg",
         "recommend": true,
         "recipe": [
           "花甲"
@@ -180,7 +180,7 @@ const mealData = {
         "type": [
           2
         ],
-        "src": "3.jpg",
+        "src": "./photo/photo2.jpg",
         "recommend": false,
         "recipe": [
           "排骨",
@@ -207,7 +207,7 @@ const mealData = {
           7,
           1
         ],
-        "src": "8.jpg",
+        "src": "./photo/photo5.jpg",
         "recommend": true,
         "recipe": [
           "土豆",
@@ -231,7 +231,7 @@ const mealData = {
         "type": [
           7
         ],
-        "src": "14.jpg",
+        "src": "./photo/photo18.jpg",
         "recommend": true,
         "recipe": [
           "土豆",
@@ -258,7 +258,7 @@ const mealData = {
         "type": [
           5
         ],
-        "src": "21.jpg",
+        "src": "./photo/photo22.jpg",
         "recommend": true,
         "recipe": [
           "鱼",
@@ -284,7 +284,7 @@ const mealData = {
         "type": [
           7
         ],
-        "src": "22.jpg",
+        "src": "./photo/photo19.jpg",
         "recommend": true,
         "recipe": [
           "豆腐"
@@ -311,7 +311,7 @@ const mealData = {
           1,
           4
         ],
-        "src": "19.jpg",
+        "src": "./photo/photo20.jpg",
         "recommend": false,
         "recipe": [
           "牛"
@@ -336,7 +336,7 @@ const mealData = {
           6,
           8
         ],
-        "src": "2.jpg",
+        "src": "./photo/photo3.jpg",
         "recommend": false,
         "recipe": [
           "鸡腿肉/鸡胸肉",
@@ -368,7 +368,7 @@ const mealData = {
         "type": [
           7
         ],
-        "src": "1.jpg",
+        "src": "./photo/photo1.jpg",
         "recommend": false,
         "recipe": [
           "豆角",
@@ -393,7 +393,7 @@ const mealData = {
         "type": [
           3
         ],
-        "src": "27.jpg",
+        "src": "./photo/photo27.jpg",
         "recommend": true,
         "recipe": [
           "土豆",
@@ -417,7 +417,7 @@ const mealData = {
         "type": [
           2
         ],
-        "src": "11.jpg",
+        "src": "./photo/photo10.jpg",
         "recommend": true,
         "recipe": [
           "猪脚",
@@ -442,7 +442,7 @@ const mealData = {
         "type": [
           6
         ],
-        "src": "4.jpg",
+        "src": "./photo/photo6.jpg",
         "recommend": false,
         "recipe": [
           "鸡",
@@ -468,7 +468,7 @@ const mealData = {
         "type": [
           4
         ],
-        "src": "5.jpg",
+        "src": "./photo/photo4.jpg",
         "recommend": false,
         "recipe": [
           "牛肉",
@@ -493,7 +493,7 @@ const mealData = {
         "type": [
           6
         ],
-        "src": "6.jpg",
+        "src": "./photo/photo8.jpg",
         "recommend": false,
         "recipe": [
           "鸡翅",
@@ -519,7 +519,7 @@ const mealData = {
         "type": [
           2
         ],
-        "src": "10.jpg",
+        "src": "./photo/photo12.jpg",
         "recommend": false,
         "recipe": [
           "西蓝花",
@@ -543,7 +543,7 @@ const mealData = {
         "type": [
           7
         ],
-        "src": "15.jpg",
+        "src": "./photo/photo16.jpg",
         "recommend": false,
         "recipe": [
           "油麦菜"
@@ -565,7 +565,7 @@ const mealData = {
         "type": [
           2
         ],
-        "src": "17.jpg",
+        "src": "./photo/photo17.jpg",
         "recommend": false,
         "recipe": [
           "猪肉",
@@ -595,7 +595,7 @@ const mealData = {
         "type": [
           3
         ],
-        "src": "20.jpg",
+        "src": "./photo/photo24.jpg",
         "recommend": false,
         "recipe": [
           "羊腿",
@@ -618,7 +618,7 @@ const mealData = {
         "type": [
           8
         ],
-        "src": "23.jpg",
+        "src": "./photo/photo26.jpg",
         "recommend": true,
         "recipe": [
           "面条",
@@ -646,7 +646,7 @@ const mealData = {
         "type": [
           8
         ],
-        "src": "24.jpg",
+        "src": "./photo/photo25.jpg",
         "recommend": false,
         "recipe": [
           "面粉",
@@ -672,7 +672,7 @@ const mealData = {
         "type": [
           9
         ],
-        "src": "25.jpg",
+        "src": "./photo/photo23.jpg",
         "recommend": false,
         "recipe": [
           "咸蛋黄",
