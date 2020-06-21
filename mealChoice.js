@@ -82,7 +82,7 @@ const mealData = {
         "id": 9,
         "name": "麻婆豆腐",
         "type": [
-          7
+          2, 4, 7
         ],
         "src": "./photo/photo7.jpg",
         "recommend": false,
