@@ -122,6 +122,11 @@
           filterDishes: [],
           dishes: mealData.meals
         },
+        watch: {
+          search: function(newS, oldS) {
+            if (!newS) this.handleClear();
+          }
+        },
         created: function() {
           this.filterDishes = this.dishes;
         },

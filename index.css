@@ -102,7 +102,7 @@ header {
 }
 
 .menu-list>div {
-  flex: 0 0 22.7%;
+  flex: 0 0 22%;
   margin-right: 3%;
 }
 
@@ -196,7 +196,9 @@ header {
 }
 
 @media screen and (min-width: 721px) {
-  
+  #side-bar {
+    max-width: 200px;
+  }
 }
 
 
