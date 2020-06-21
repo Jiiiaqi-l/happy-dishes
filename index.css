@@ -16,26 +16,26 @@ header {
 
 #logo {
   font-weight: 400;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   font-family: 'ZCOOL XiaoWei', serif;
 }
 
 #logo span:first-child {
-  color: #16b784;
+  color: #fe4066;
 }
 
 #logo span:nth-child(2) {
-  color: #cc67e4;
+  color: #fe4066;
   margin-left: -5px;
 }
 
 #logo span:nth-child(3) {
-  color: #e49505;
+  color: #fe4066;
   margin-left: -5px;
 }
 
 #logo span:last-child {
-  color: #3a8ee6;
+  color: #1187e4;;
   font-weight: 700;
 }
 
@@ -46,20 +46,27 @@ header {
 
 #search input {
   font-size: 1.1rem;
-  padding: 5px 10px;
-  height: 35px;
   width: 37%;
   vertical-align: super;
+  background: url(./lens.svg) no-repeat 12px center;
+  background-size: 18px;
+  background-color: #fff;
+  border-radius: 3px;
+  border: 1px solid #d1e1e8;
+  height: 45px;
+  padding: 0 0 0 40px;
+  color: var(--theme-color-desaturated-blue);
+  font-weight: 300;
 }
 
 #search button {
   font-size: 1.1rem;
   padding: 3px 12px;
   margin-left: 10px;
-  height: 35px;
-  background-color: #e49505;
+  height: 45px;
+  background-color: #fe4066;
   color: #fff;
-  border: 1px solid #e49505;
+  border: 1px solid #fe4066;
   border-radius: .25rem;
   vertical-align: super;
 }
@@ -77,11 +84,11 @@ header {
 
 #side-bar li:hover {
   cursor: pointer;
-  color: #fd7e14;
+  color: #fe4066;
 }
 
 .orange-font {
-  color: #fd7e14;
+  color: #fe4066;
 }
 
 #side-bar i {
@@ -118,7 +125,7 @@ header {
 }
 
 .menu-list figure:hover figcaption {
-  color: #fd7e14;
+  color: #fe4066;
   transition: .5s ease;
 }
 
@@ -133,7 +140,7 @@ header {
 .recommend {
   font-size: .7rem;
   border: 1px solid #ddd;
-  background-color: #ffc107;
+  background-color: #1187e4;
   color: #fff;
   margin-left: 1rem;
 }

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.982 20.982">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #292f48;
+      }
+    </style>
+  </defs>
+  <g id="SearchinsideInput" transform="translate(0 0)">
+    <g id="Search">
+      <path id="Search-2" data-name="Search" class="cls-1" d="M16.835,16.129l5.992,5.992a.5.5,0,0,1-.706.706l-5.992-5.992a8.488,8.488,0,1,1,.706-.706ZM3,10.489A7.49,7.49,0,1,0,10.489,3,7.49,7.49,0,0,0,3,10.489Z" transform="translate(-2 -2)"/>
+    </g>
+  </g>
+</svg>
